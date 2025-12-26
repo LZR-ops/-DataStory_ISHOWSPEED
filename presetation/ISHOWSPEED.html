@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Streamer Diplomacy: Sentiment Analysis</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;500;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        :root {
+            --bg-color: #f8f5f2;
+            --text-color: #2d3436;
+            --accent-red: #d63031;
+            --accent-blue: #0984e3;
+            --highlight: #fdcb6e;
+        }
+
+        body {
+            margin: 0;
+            padding: 40px;
+            background-color: #e3e3e3;
+            font-family: 'DM Sans', sans-serif;
+            color: var(--text-color);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 40px;
+        }
+
+        .slide {
+            width: 1280px;
+            height: 720px;
+            background-color: var(--bg-color);
+            border-radius: 8px;
+            box-shadow: 0 20px 50px rgba(0,0,0,0.1);
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            padding: 60px;
+            box-sizing: border-box;
+        }
+
+        h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 72px;
+            margin: 0;
+        }
+
+        h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 48px;
+            margin-bottom: 30px;
+            border-left: 5px solid var(--accent-red);
+            padding-left: 20px;
+        }
+
+        h3 {
+            font-size: 28px;
+            color: var(--accent-blue);
+        }
+
+        p, li {
+            font-size: 22px;
+            line-height: 1.6;
+            color: #636e72;
+        }
+
+        .highlight-text {
+            color: var(--accent-red);
+            font-weight: 700;
+        }
+
+        .center-content {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            height: 100%;
+        }
+
+        .two-col {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+        }
+
+        .three-col {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+
+        .img-container {
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            height: 100%;
+        }
+
+        img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+        }
+
+        .slide-number {
+            position: absolute;
+            bottom: 30px;
+            right: 40px;
+            font-family: 'Playfair Display', serif;
+            color: #b2bec3;
+            font-size: 24px;
+        }
+
+        .stat-box {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            text-align: center;
+            border: 1px solid #dfe6e9;
+        }
+
+        .stat-number {
+            font-size: 64px;
+            font-family: 'Playfair Display', serif;
+            color: var(--accent-red);
+            font-weight: bold;
+        }
+
+        .method-step {
+            display: flex;
+            align-items: center;
+            margin-bottom: 25px;
+            background: white;
+            padding: 20px;
+            border-radius: 50px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+
+        .step-icon {
+            width: 60px;
+            height: 60px;
+            background: var(--accent-red);
+            color: white;
+            border-radius: 50%;
+            display: grid;
+            place-items: center;
+            font-size: 24px;
+            margin-right: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+<!-- SLIDE 1 -->
+<div class="slide">
+    <div class="center-content">
+        <p style="letter-spacing: 3px; text-transform: uppercase; color: var(--accent-red); font-weight: bold;">
+            Final Project Presentation
+        </p>
+        <h1>Streamer Diplomacy:<br>The Great China Journey</h1>
+        <p style="font-size: 28px; margin-top: 20px;">
+            Understanding Global Reactions through Live Chat Data
+        </p>
+        <p style="font-size: 40px; margin-top: 60px; font-weight: 600; color: var(--accent-red);">
+            Zerong Lu
+        </p>
+    </div>
+    <div class="slide-number">01</div>
+</div>
+
+<!-- SLIDE 2 -->
+<div class="slide">
+    <h2>The Phenomenon: Why This Matters</h2>
+    <div class="two-col">
+        <div>
+            <p>
+                In late 2024, American mega-streamer <strong>IShowSpeed</strong> livestreamed his visit to China,
+                exposing millions of global viewers to Chinese cities in real time.
+            </p>
+            <p>
+                Unlike edited media, live streams generate <strong>instant, unfiltered audience reactions</strong>
+                through fast-moving chat messages.
+            </p>
+            <p>
+                <strong>Research Question:</strong><br>
+                When viewers watch China through a livestream, are chat reactions merely chaotic noise —
+                or do they reveal meaningful patterns of <span class="highlight-text">global perception and curiosity</span>?
+            </p>
+        </div>
+        <div class="img-container">
+            <img src="ishowspeed.png" alt="IShowSpeed streaming in China">
+        </div>
+    </div>
+    <div class="slide-number">02</div>
+</div>
+
+<!-- SLIDE 3 -->
+<div class="slide">
+    <h2>The Toolkit: Taming the Noise</h2>
+    <div class="two-col">
+        <div>
+            <p>We transformed chaotic live chat into structured, interpretable data.</p>
+
+            <div class="method-step">
+                <div class="step-icon"><i class="fa-solid fa-cloud-arrow-down"></i></div>
+                <div>
+                    <strong>1. Scrape</strong><br>
+                    1,000 live chat comments per city via the YouTube API
+                </div>
+            </div>
+
+            <div class="method-step">
+                <div class="step-icon"><i class="fa-solid fa-filter"></i></div>
+                <div>
+                    <strong>2. Clean</strong><br>
+                    Removal of emojis, URLs, and high-frequency stop words using NLTK
+                </div>
+            </div>
+
+            <div class="method-step">
+                <div class="step-icon"><i class="fa-solid fa-brain"></i></div>
+                <div>
+                    <strong>3. Analyze</strong><br>
+                    VADER sentiment analysis — a rule-based NLP model designed for social media —
+                    classifying comments as <em>Positive</em>, <em>Neutral</em> (descriptive), or <em>Negative</em>
+                </div>
+            </div>
+        </div>
+
+        <div class="stat-box">
+            <i class="fa-solid fa-database" style="font-size: 50px; color: var(--accent-blue);"></i>
+            <h3>Total Corpus</h3>
+            <span class="stat-number">2,000+</span>
+            <p>Live Chat Comments Analyzed</p>
+        </div>
+    </div>
+    <div class="slide-number">03</div>
+</div>
+
+<!-- SLIDE 4 -->
+<div class="slide">
+    <h2>Shanghai: The Vertical Metropolis</h2>
+    <div class="two-col">
+        <div>
+            <h3>Audience Focus</h3>
+            <p>
+                Viewers repeatedly commented on urban scale, lighting, and futuristic aesthetics,
+                often comparing Shanghai to other global Asian cities.
+            </p>
+            <h3>Interpretation</h3>
+            <p>
+                Frequent mentions of <strong>“Korea”</strong> suggest viewers frame Shanghai through familiar
+                regional benchmarks, positioning it within a global hierarchy of modern cities.
+            </p>
+        </div>
+        <div class="img-container">
+            <img src="wordcloud_shanghai.png" alt="Shanghai Word Cloud">
+        </div>
+    </div>
+    <div class="slide-number">04</div>
+</div>
+
+<!-- SLIDE 5 -->
+<div class="slide">
+    <h2>Observational Neutrality (Shanghai)</h2>
+    <div class="two-col">
+        <div class="img-container">
+            <img src="sentiment_dist_shanghai.png" alt="Shanghai Sentiment Distribution">
+        </div>
+        <div>
+            <div class="stat-box">
+                <span class="stat-number">55.9%</span>
+                <p>Neutral Sentiment</p>
+            </div>
+            <p>
+                Neutral comments dominate because viewers primarily describe what they see
+                rather than expressing strong judgments — acting as <strong>digital tourists</strong>.
+            </p>
+        </div>
+    </div>
+    <div class="slide-number">05</div>
+</div>
+
+<!-- SLIDE 6 -->
+<div class="slide">
+    <h2>Chongqing: The 8D City</h2>
+    <div class="two-col">
+        <div>
+            <p>
+                Unlike Shanghai, the chat focuses less on comparison and more on Chongqing’s
+                unique vertical geography and visual complexity.
+            </p>
+            <p>
+                Words such as <strong>“city”</strong> and <strong>“beautiful”</strong> dominate,
+                indicating visual fascination rather than geopolitical framing.
+            </p>
+        </div>
+        <div class="img-container">
+            <img src="wordcloud_chongqing.png" alt="Chongqing Word Cloud">
+        </div>
+    </div>
+    <div class="slide-number">06</div>
+</div>
+
+<!-- SLIDE 7 -->
+<div class="slide">
+    <h2>Consistency Across Cities</h2>
+    <div class="two-col">
+        <div class="img-container">
+            <img src="sentiment_dist_chongqing.png" alt="Chongqing Sentiment Distribution">
+        </div>
+        <div>
+            <div class="stat-box">
+                <span class="stat-number">60.1%</span>
+                <p>Neutral Sentiment</p>
+            </div>
+            <p>
+                Despite visual differences, sentiment distributions remain strikingly similar —
+                reinforcing the idea of livestream audiences as observers first, evaluators second.
+            </p>
+        </div>
+    </div>
+    <div class="slide-number">07</div>
+</div>
+
+<!-- SLIDE 8 -->
+<div class="slide">
+    <h2>Comparing Attention Across Cities</h2>
+    <div class="two-col">
+        <div class="img-container">
+            <img src="top_keywords_shanghai.png">
+            <p style="position:absolute;bottom:10px;">Shanghai</p>
+        </div>
+        <div class="img-container">
+            <img src="Top_10_Keywords_Chart_chongqing.png">
+            <p style="position:absolute;bottom:10px;">Chongqing</p>
+        </div>
+    </div>
+    <div class="slide-number">08</div>
+</div>
+
+<!-- SLIDE 9 -->
+<div class="slide">
+    <h2>Key Takeaways</h2>
+    <div class="three-col">
+        <div class="stat-box">
+            <h3>Digital Tourist Gaze</h3>
+            <p>Chats function as collective observation rather than political debate.</p>
+        </div>
+        <div class="stat-box">
+            <h3>Curiosity Over Negativity</h3>
+            <p>Positive sentiment consistently outweighs negative reactions.</p>
+        </div>
+        <div class="stat-box">
+            <h3>Global Framing</h3>
+            <p>Viewers interpret cities through global and regional reference points.</p>
+        </div>
+    </div>
+    <div class="slide-number">09</div>
+</div>
+
+<!-- SLIDE 10 -->
+<div class="slide">
+    <h2>Limitations & Future Work</h2>
+    <ul>
+        <li>VADER struggles with sarcasm and streaming slang</li>
+        <li>No timestamp-level sentiment alignment</li>
+        <li>Future work: temporal and multilingual analysis</li>
+    </ul>
+    <div class="slide-number">10</div>
+</div>
+
+<!-- SLIDE 11 -->
+<div class="slide">
+    <div class="center-content">
+        <h2>Conclusion</h2>
+        <p style="font-size:32px;">
+            Livestreams are not just entertainment —
+            they are <span class="highlight-text">windows into global perception</span>.
+        </p>
+        <p>Thank you.</p>
+    </div>
+    <div class="slide-number">11</div>
+</div>
+
+</body>
+</html>

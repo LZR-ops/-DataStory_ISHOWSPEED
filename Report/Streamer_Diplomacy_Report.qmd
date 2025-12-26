@@ -1,0 +1,150 @@
+
+---
+title: "Streamer Diplomacy: Sentiment Analysis of Global Live Chat Reactions"
+author: "Zerong Lu"
+date: "2025"
+format:
+  html:
+    toc: true
+    toc-depth: 2
+    number-sections: true
+    theme: cosmo
+execute:
+  echo: true
+  warning: false
+  message: false
+---
+
+## Executive Summary
+
+This project examines how global audiences react to China when exposed through the livestreams of American mega-streamer IShowSpeed. Using YouTube live chat data from streams in **Shanghai** and **Chongqing**, the study investigates whether livestream chats represent chaotic online noise or meaningful patterns of perception.
+Analyzing **2,000** chat comments through sentiment analysis and keyword exploration, the findings show that most reactions are neutral and observational, with positive sentiment consistently outweighing negative sentiment. These patterns suggest that livestream audiences behave as digital tourists, observing unfamiliar places rather than engaging in political judgment.
+---
+
+## Introduction — A Livestream, a City, and Millions of Viewers
+
+Imagine seeing a city you have never visited, not through a documentary or the evening news, but through the shaky camera of a young man walking its streets, reacting in real time, surrounded by crowds, lights, and noise. At the same time, thousands of viewers from around the world are typing short messages—expressing surprise, confusion, excitement, or simply describing what they see. This is the environment of contemporary livestreaming.
+
+**IShowSpeed** is a popular American internet streamer known for his energetic, spontaneous style and large global audience. While he is primarily an entertainment figure, his livestreams often attract millions of viewers who follow him not only for humor, but also to witness unexpected situations unfold live. In late 2024, IShowSpeed traveled to **China** and livestreamed his experiences in major cities such as **Shanghai** and **Chongqing**.
+
+For many viewers, these livestreams offered a rare and direct visual encounter with Chinese cities. Unlike news coverage or curated travel content, the streams were long, unedited, and unscripted. Viewers saw everyday urban scenes: streets, buildings, transportation systems, crowds, and city lights—often for the first time. As the streamer moved through the city, the audience reacted instantly through live chat.
+
+At first glance, livestream chat messages appear chaotic. They scroll quickly, are often repetitive, and mix jokes, emojis, and short comments. Because of this, live chat is frequently dismissed as meaningless online noise. However, this project starts from a different assumption: that even within this apparent disorder, patterns of attention, perception, and interpretation can emerge.
+
+This study treats livestream chat as a form of collective observation. Viewers use short messages to describe what they see (“this looks modern”), compare it to familiar places (“this reminds me of Korea”), express surprise, or simply react emotionally. While individual messages may be brief or trivial, taken together they form a collective response to a shared visual experience.
+
+The central question of this project is therefore simple but important:
+
+- **When global audiences watch a livestream from an unfamiliar place, are their reactions just noise—or do they reveal meaningful patterns in how places are perceived?**
+
+To explore this question, this project analyzes live chat comments from IShowSpeed’s livestreams in Shanghai and Chongqing. Using sentiment analysis and keyword exploration, the study examines how viewers react emotionally and what aspects of the cities they focus on. By comparing two different urban contexts, the analysis asks whether audience perceptions change depending on what they see—or whether similar interpretive patterns appear regardless of location.
+
+By telling a story through data, this project shows that livestream chats are more than background clutter. They are part of how contemporary digital publics encounter, interpret, and make sense of the world in real time.
+
+---
+
+## Data and Corpus
+
+### Data Source
+
+The dataset consists of YouTube live chat comments collected during IShowSpeed’s livestreams in:
+
+- Shanghai  
+- Chongqing  
+
+These cities were selected due to their contrasting urban identities: Shanghai as a globally recognized megacity, and Chongqing as a visually complex and less internationally familiar city.
+
+### Data Collection
+
+- 1,000 chat comments per city collected via the YouTube API  
+- Total corpus size: **2,000 comments**  
+- Focus on English-language comments
+
+---
+
+## Data Cleaning and Preprocessing
+
+The following preprocessing steps were applied:
+
+- Removal of emojis, URLs, and special characters  
+- Lowercasing of text  
+- Removal of stop words using NLTK  
+- Tokenization for keyword analysis  
+
+These steps aimed to reduce noise while preserving semantically meaningful content.
+
+---
+
+## Methodology
+
+### Sentiment Analysis with VADER
+
+Sentiment was analyzed using **VADER (Valence Aware Dictionary and sEntiment Reasoner)**, a rule-based NLP model designed for social media text.
+
+Each comment was classified as:
+
+- **Positive**: expressions of approval or excitement  
+- **Neutral**: descriptive or observational statements  
+- **Negative**: expressions of criticism or frustration  
+
+Neutral sentiment is interpreted not as disengagement, but as *observational attention*.
+
+### Keyword Analysis
+
+Word frequency analysis and word clouds were generated separately for Shanghai and Chongqing. Highly frequent generic terms (e.g., “stream”, “speed”, “china”) were removed in comparative analyses to emphasize city-specific discourse.
+
+---
+
+## Results
+
+### Sentiment Distribution
+
+Across both cities, neutral sentiment dominates:
+
+- Shanghai: 55.9% neutral  
+- Chongqing: 60.1% neutral  
+
+Positive sentiment consistently exceeds negative sentiment, indicating curiosity rather than hostility.
+
+### City-Level Differences
+
+**Shanghai** chat reactions emphasize scale, modernity, and global comparison, frequently referencing other Asian cities such as Seoul.
+
+**Chongqing** reactions focus more on visual uniqueness and geographic complexity, with fewer comparative references.
+
+---
+
+## Discussion
+
+The findings challenge the assumption that livestream chat spaces are inherently chaotic or toxic. Instead, they function as collective observation spaces where audiences engage in real-time sense-making.
+
+This supports the concept of a **digital tourist gaze**, where viewers act as spectators encountering unfamiliar urban environments.
+
+---
+
+## Limitations
+
+- VADER struggles with sarcasm and Gen-Z slang  
+- No temporal alignment between comments and specific stream events  
+- Analysis limited to English-language comments  
+
+---
+
+## Future Work
+
+- Temporal sentiment analysis aligned with stream moments  
+- Multilingual sentiment analysis including Chinese comments  
+- Comparative analysis with other streamers or countries  
+
+---
+
+## Conclusion
+
+IShowSpeed’s China livestreams were not merely entertainment events, but moments of large-scale cultural exposure. The dominance of neutral and positive sentiment suggests that livestream chats can function as meaningful indicators of global perception rather than simple noise.
+
+Livestreams thus offer valuable opportunities for studying the digital public sphere in real time.
+
+---
+
+## Appendix: Reproducible Analysis Code
+
