@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.7.32">
+<meta name="generator" content="quarto-1.8.26">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -28,14 +28,15 @@ ul.task-list li input[type="checkbox"] {
 <script src="Streamer_Diplomacy_Report_files/libs/clipboard/clipboard.min.js"></script>
 <script src="Streamer_Diplomacy_Report_files/libs/quarto-html/quarto.js" type="module"></script>
 <script src="Streamer_Diplomacy_Report_files/libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="Streamer_Diplomacy_Report_files/libs/quarto-html/axe/axe-check.js" type="module"></script>
 <script src="Streamer_Diplomacy_Report_files/libs/quarto-html/popper.min.js"></script>
 <script src="Streamer_Diplomacy_Report_files/libs/quarto-html/tippy.umd.min.js"></script>
 <script src="Streamer_Diplomacy_Report_files/libs/quarto-html/anchor.min.js"></script>
 <link href="Streamer_Diplomacy_Report_files/libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="Streamer_Diplomacy_Report_files/libs/quarto-html/quarto-syntax-highlighting-37eea08aefeeee20ff55810ff984fec1.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="Streamer_Diplomacy_Report_files/libs/quarto-html/quarto-syntax-highlighting-587c61ba64f3a5504c4d52d930310e48.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="Streamer_Diplomacy_Report_files/libs/bootstrap/bootstrap.min.js"></script>
 <link href="Streamer_Diplomacy_Report_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="Streamer_Diplomacy_Report_files/libs/bootstrap/bootstrap-813c323200a87c37e262811031999de4.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="Streamer_Diplomacy_Report_files/libs/bootstrap/bootstrap-4d7f0bce1131f3e5f9547cd857cfbfc8.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 
 
 </head>
@@ -50,15 +51,13 @@ ul.task-list li input[type="checkbox"] {
   <ul class="collapse">
   <li><a href="#executive-summary" id="toc-executive-summary" class="nav-link active" data-scroll-target="#executive-summary"><span class="header-section-number">1</span> Executive Summary</a></li>
   <li><a href="#introduction-a-livestream-a-city-and-millions-of-viewers" id="toc-introduction-a-livestream-a-city-and-millions-of-viewers" class="nav-link" data-scroll-target="#introduction-a-livestream-a-city-and-millions-of-viewers"><span class="header-section-number">2</span> Introduction — A Livestream, a City, and Millions of Viewers</a></li>
-  <li><a href="#data-and-corpus" id="toc-data-and-corpus" class="nav-link" data-scroll-target="#data-and-corpus"><span class="header-section-number">3</span> Data and Corpus</a></li>
-  <li><a href="#data-cleaning-and-preprocessing" id="toc-data-cleaning-and-preprocessing" class="nav-link" data-scroll-target="#data-cleaning-and-preprocessing"><span class="header-section-number">4</span> Data Cleaning and Preprocessing</a></li>
-  <li><a href="#methodology" id="toc-methodology" class="nav-link" data-scroll-target="#methodology"><span class="header-section-number">5</span> Methodology</a></li>
-  <li><a href="#results" id="toc-results" class="nav-link" data-scroll-target="#results"><span class="header-section-number">6</span> Results</a></li>
-  <li><a href="#discussion" id="toc-discussion" class="nav-link" data-scroll-target="#discussion"><span class="header-section-number">7</span> Discussion</a></li>
-  <li><a href="#limitations" id="toc-limitations" class="nav-link" data-scroll-target="#limitations"><span class="header-section-number">8</span> Limitations</a></li>
-  <li><a href="#future-work" id="toc-future-work" class="nav-link" data-scroll-target="#future-work"><span class="header-section-number">9</span> Future Work</a></li>
-  <li><a href="#conclusion" id="toc-conclusion" class="nav-link" data-scroll-target="#conclusion"><span class="header-section-number">10</span> Conclusion</a></li>
-  <li><a href="#appendix-reproducible-analysis-code" id="toc-appendix-reproducible-analysis-code" class="nav-link" data-scroll-target="#appendix-reproducible-analysis-code"><span class="header-section-number">11</span> Appendix: Reproducible Analysis Code</a></li>
+  <li><a href="#who-is-ishowspeed-the-background-story" id="toc-who-is-ishowspeed-the-background-story" class="nav-link" data-scroll-target="#who-is-ishowspeed-the-background-story"><span class="header-section-number">3</span> Who is ISHOWSPEED? The Background Story</a></li>
+  <li><a href="#how-we-did-it-methods-at-a-glance" id="toc-how-we-did-it-methods-at-a-glance" class="nav-link" data-scroll-target="#how-we-did-it-methods-at-a-glance"><span class="header-section-number">4</span> How We Did It – Methods at a Glance</a></li>
+  <li><a href="#first-stop-shanghai-the-neon-metropolis" id="toc-first-stop-shanghai-the-neon-metropolis" class="nav-link" data-scroll-target="#first-stop-shanghai-the-neon-metropolis"><span class="header-section-number">5</span> First Stop: Shanghai – The Neon Metropolis</a></li>
+  <li><a href="#second-stop-chongqing-the-8d-cyberpunk-wonder" id="toc-second-stop-chongqing-the-8d-cyberpunk-wonder" class="nav-link" data-scroll-target="#second-stop-chongqing-the-8d-cyberpunk-wonder"><span class="header-section-number">6</span> Second Stop: Chongqing – The 8D Cyberpunk Wonder</a></li>
+  <li><a href="#shanghai-vs-chongqing-spotting-the-differences" id="toc-shanghai-vs-chongqing-spotting-the-differences" class="nav-link" data-scroll-target="#shanghai-vs-chongqing-spotting-the-differences"><span class="header-section-number">7</span> Shanghai vs Chongqing – Spotting the Differences</a></li>
+  <li><a href="#conclusion-looking-ahead" id="toc-conclusion-looking-ahead" class="nav-link" data-scroll-target="#conclusion-looking-ahead"><span class="header-section-number">8</span> Conclusion &amp; Looking Ahead</a></li>
+  <li><a href="#final-thought" id="toc-final-thought" class="nav-link" data-scroll-target="#final-thought"><span class="header-section-number">9</span> Final Thought</a></li>
   </ul>
 </nav>
 </div>
@@ -114,121 +113,176 @@ ul.task-list li input[type="checkbox"] {
 <p>By telling a story through data, this project shows that livestream chats are more than background clutter. They are part of how contemporary digital publics encounter, interpret, and make sense of the world in real time.</p>
 <hr>
 </section>
-<section id="data-and-corpus" class="level2" data-number="3">
-<h2 data-number="3" class="anchored" data-anchor-id="data-and-corpus"><span class="header-section-number">3</span> Data and Corpus</h2>
-<section id="data-source" class="level3" data-number="3.1">
-<h3 data-number="3.1" class="anchored" data-anchor-id="data-source"><span class="header-section-number">3.1</span> Data Source</h3>
-<p>The dataset consists of YouTube live chat comments collected during IShowSpeed’s livestreams in:</p>
+<section id="who-is-ishowspeed-the-background-story" class="level2" data-number="3">
+<h2 data-number="3" class="anchored" data-anchor-id="who-is-ishowspeed-the-background-story"><span class="header-section-number">3</span> Who is ISHOWSPEED? The Background Story</h2>
+<p>Picture a regular teenager in Cincinnati, Ohio, back in 2016. He’s just 11 years old, messing around with a camera and uploading simple gameplay videos of games like NBA 2K to a brand-new YouTube channel. His real name is <strong>Darren Jason Watkins Jr.</strong>, but the internet would soon know him as <strong>IShowSpeed</strong> — or just Speed for short.</p>
+<p>For the first few years, things moved slowly. Darren was a kid who loved basketball, gaming, and expressing himself loudly. He posted occasionally, gained a small following, but nothing huge. Then came 2021 — the year everything exploded.</p>
+<p>Speed started doing live streams where he played games with zero filter. When things went wrong (which was often), he didn’t hold back: he screamed at the top of his lungs, raged dramatically, jumped around like crazy, barked like a dog in memes, and reacted in the most over-the-top ways imaginable. Fans captured these wild moments and turned them into hilarious short clips that spread like wildfire on TikTok and Twitter (now X). People couldn’t stop watching — some were shocked, others were laughing so hard they cried, but everyone talked about him.</p>
+<p>Subscribers poured in at an insane rate. From almost unknown, he hit 1 million subscribers in a flash. Then 10 million. Then 20, 30, 40 million… By late December 2025, his main YouTube channel boasts over <strong>46 million subscribers</strong> and billions of total views (more than 6.4 billion!). He’s become one of the fastest-growing and most-watched English-speaking streamers ever, winning big awards like <strong>Streamer of the Year</strong> at the Streamer Awards in both 2024 and 2025.</p>
+<p>But Speed didn’t stay in his bedroom forever. His streams evolved into massive real-life adventures. He traveled the world on epic tours — Europe, Southeast Asia, Argentina (for his 20th birthday in January 2025), and more. He’s a huge Cristiano Ronaldo fan, so he’s played in charity soccer matches (like the Sidemen Charity Match and Match for Hope), met football legends, and even jumped into WWE events, including a surprise appearance in the 2025 Royal Rumble.</p>
+<p>He’s released music too — songs like “World Cup,” “Shake,” and “Bailar” — and his net worth is estimated between $10–30 million in 2025 from YouTube earnings, sponsorships, merch, and more.</p>
+<p>The real magic? Speed’s unfiltered, 100% authentic energy. He screams, dances, cries, laughs, and turns every moment into viral gold. Fans mob him in the streets, and his streams feel like hanging out with your wildest friend.</p>
+<p>Here is the unforgettable scenes of Speed surrounded by massive crowds during his China tour in early 2025 — proof that his chaos connects people across the globe:</p>
+<p><img src="../presetation/speed1.jpg" class="img-fluid" style="width:60.0%" alt="speedinshanghai"></p>
+<p>In March 2025, Speed took on his boldest adventure yet: a multi-week livestream tour across China, starting in Shanghai on March 24. He explored cities like Chongqing, Beijing, Chengdu, and more — trying local food, interacting with fans, marveling at skylines, and streaming for hours on end. Millions watched live, and for many, it was their first real, unedited glimpse of modern China through the eyes of this loud, excited American kid.</p>
+<p>That’s Speed: from quiet beginnings to global phenomenon. His story proves that sometimes, being completely yourself — even if it’s chaotic and over-the-top — can take you further than anyone ever imagined.</p>
+<hr>
+</section>
+<section id="how-we-did-it-methods-at-a-glance" class="level2" data-number="4">
+<h2 data-number="4" class="anchored" data-anchor-id="how-we-did-it-methods-at-a-glance"><span class="header-section-number">4</span> How We Did It – Methods at a Glance</h2>
+<p>Now that we know who Speed is and why his China streams matter, let’s pull back the curtain a little: how do you turn thousands of fast-scrolling, emoji-filled live chat messages into meaningful insights?</p>
+<p>The process is surprisingly straightforward — think of it as cleaning up a noisy room so you can actually hear the conversation. We focused on the two main cities from Speed’s early 2025 China tour: Shanghai and Chongqing. For each livestream, we collected around 1,000 real viewer comments (totaling more than 2,000 across both), right from YouTube’s live chat.</p>
+<p>Here’s the step-by-step journey we took:</p>
+<ol type="1">
+<li><p><strong>Collecting the raw voices:</strong> Using a tool called YoutubeCommentDownloader (or similar YouTube API access), we scraped the live chat comments posted during the streams. These are the exact messages viewers typed in real time — full of excitement, questions, jokes, emojis, and sometimes just random reactions.</p></li>
+<li><p><strong>Cleaning the mess:</strong> Live chat is full of noise: URLs, tons of emojis, repeated words like “the” or “and”, typos, and slang. We used Python and the NLTK library to clean it up — removing links, stripping punctuation, converting everything to lowercase, and filtering out common “stop words” that don’t add much meaning. This left us with clean text ready for analysis.</p></li>
+<li><p><strong>Finding the feelings and focus:</strong></p>
 <ul>
-<li>Shanghai<br>
-</li>
-<li>Chongqing</li>
-</ul>
-<p>These cities were selected due to their contrasting urban identities: Shanghai as a globally recognized megacity, and Chongqing as a visually complex and less internationally familiar city.</p>
+<li><strong>Sentiment analysis</strong>: We used VADER (Valence Aware Dictionary and sEntiment Reasoner), a tool specially designed for social media and short texts. VADER scores each comment as positive, neutral, or negative — even handling things like exclamation points and slang pretty well.</li>
+<li><strong>Keywords &amp; patterns</strong>: We counted the most common words and created word clouds to see what topics jumped out (e.g., “city”, “beautiful”, “modern”, “Korea”).</li>
+<li><strong>Comparison</strong>: By doing the same steps for both Shanghai and Chongqing, we could spot similarities and differences in how viewers reacted to each city.</li>
+</ul></li>
+</ol>
+<p>That’s the toolkit in a nutshell — no fancy AI magic, just careful steps to turn chaotic chat into clear patterns.</p>
+<p>Next, we start the real adventure: first stop, Shanghai — the futuristic neon metropolis that had everyone talking.</p>
+<hr>
 </section>
-<section id="data-collection" class="level3" data-number="3.2">
-<h3 data-number="3.2" class="anchored" data-anchor-id="data-collection"><span class="header-section-number">3.2</span> Data Collection</h3>
+<section id="first-stop-shanghai-the-neon-metropolis" class="level2" data-number="5">
+<h2 data-number="5" class="anchored" data-anchor-id="first-stop-shanghai-the-neon-metropolis"><span class="header-section-number">5</span> First Stop: Shanghai – The Neon Metropolis</h2>
+<p>March 24, 2025. After a long flight, Speed steps off the plane in Shanghai — jet-lagged, hyped, and ready to go live. What follows is over six hours of pure, unfiltered chaos: he dives into the streets, tries KFC (rating it a solid 9/10), eats dumplings, plays intense ping-pong bets with locals, gets mobbed by polite but excited fans, visits temples, does backflips in parks, and marvels at the endless sea of skyscrapers and glowing lights.</p>
+<p>For millions watching live, this wasn’t just entertainment — it was their first real, raw look at one of the world’s most futuristic cities. The chat exploded.</p>
+<p>Viewers were in awe of Shanghai’s scale and sci-fi vibe. Comments poured in about the towering buildings, neon signs, massive highways, and that famous Pudong skyline that looks like something out of a movie.</p>
+<p>The stunning shots of the Shanghai night skyline that had the chat buzzing non-stop. The word cloud from the cleaned Shanghai comments visually captures exactly what captured people’s attention the most. Bigger words mean they appeared more frequently:</p>
+<p><img src="../presetation/wordcloud_shanghai.png" class="img-fluid" style="width:60.0%" alt="wordcloud (Shanghai)"></p>
+<p>This massive word cloud shows the clear focus on <strong>“china”</strong>, <strong>“streams”</strong>, <strong>“korea”</strong>, <strong>“speed”</strong>, <strong>“chinese”</strong>, <strong>“people”</strong>, <strong>“world”</strong>, and many comparisons to Korea.</p>
+<p>The top 10 keywords chart confirms the same story in a clean bar format. Here is the ranked list of the most frequent words used in the Shanghai livestream comments:</p>
+<p><img src="../presetation/top_keywords_shanghai.png" class="img-fluid" style="width:60.0%" alt="Top keywords (Shanghai)"></p>
+<p>As we can see, <strong>“china”</strong> leads by a huge margin (over 200 mentions), followed closely by <strong>“streams”</strong> and <strong>“korea”</strong> — viewers were constantly framing this new experience through familiar reference points.</p>
+<p>Now let’s look at how people actually felt while watching.</p>
+<p>The sentiment distribution tells us the emotional tone of the comments:</p>
+<p><img src="../presetation/sentiment_dist_shanghai.png" class="img-fluid" style="width:60.0%" alt="sentiment_dist_shanghai"></p>
+<p>Out of all analyzed comments: ~300 were positive (full of excitement, love, and admiration) ~600 were neutral (mostly descriptive observations like “this looks modern” or “beautiful city”) ~130 were negative (a small minority, often about crowds, sniping, or minor frustrations)</p>
+<p>The compound sentiment score distribution gives us an even more detailed picture:</p>
+<p><img src="../presetation/sentiment_score_hist_shanghai.png" class="img-fluid" style="width:60.0%" alt="sentiment_score_hist_shanghai (Shanghai)"></p>
+<p>Notice the huge spike at exactly 0.00 (neutral) with 591 comments, and much smaller tails on both positive and negative sides. This confirms that most viewers were acting as <strong>digital tourists</strong> — observing and describing more than strongly judging or criticizing.</p>
+<p>Shanghai set the tone for the whole China tour — a city that left viewers mostly speechless, reaching for comparisons (especially to Korea), and quietly impressed.</p>
+<hr>
+</section>
+<section id="second-stop-chongqing-the-8d-cyberpunk-wonder" class="level2" data-number="6">
+<h2 data-number="6" class="anchored" data-anchor-id="second-stop-chongqing-the-8d-cyberpunk-wonder"><span class="header-section-number">6</span> Second Stop: Chongqing – The 8D Cyberpunk Wonder</h2>
+<p>After the dazzling, sky-high spectacle of Shanghai, Speed continued his China adventure and arrived in Chongqing — a city often called the “8D” or “mountain city” because of its wild, multi-layered geography. Rivers, hills, bridges, and buildings stack on top of each other in a way that feels like stepping into a real-life cyberpunk video game.</p>
+<p>The livestream here was just as long and chaotic: Speed tried spicy hotpot (sweating and screaming the whole time), rode crazy escalators that go through buildings, explored night markets, interacted with even bigger crowds, and kept staring in disbelief at the glowing, overlapping cityscape that changes every time you turn a corner.</p>
+<p>While Shanghai made people compare and benchmark (<strong>“this looks like Korea!”</strong>), Chongqing hit differently. The chat shifted from framing and reference to pure, almost childlike wonder. Viewers typed things like <strong>“beautiful”</strong>, <strong>“insane”</strong>, <strong>“city”</strong>, <strong>“lights”</strong>, <strong>“layers”</strong>, and <strong>“wow”</strong> over and over.</p>
+<p>Here are two breathtaking views of Chongqing’s legendary nightscape — the exact kind of layered, glowing chaos that blew up the live chat:</p>
 <ul>
-<li>1,000 chat comments per city collected via the YouTube API<br>
-</li>
-<li>Total corpus size: <strong>2,000 comments</strong><br>
-</li>
-<li>Focus on English-language comments</li>
+<li>The word cloud from Chongqing comments shows this clear change in focus. Compared to Shanghai, the comparisons (especially <strong>“Korea”</strong>) almost <strong>disappear</strong>. Instead, words about <strong>beauty</strong>, <strong>scale</strong>, and the <strong>unique vertical</strong> feel take over.</li>
 </ul>
-<hr>
-</section>
-</section>
-<section id="data-cleaning-and-preprocessing" class="level2" data-number="4">
-<h2 data-number="4" class="anchored" data-anchor-id="data-cleaning-and-preprocessing"><span class="header-section-number">4</span> Data Cleaning and Preprocessing</h2>
-<p>The following preprocessing steps were applied:</p>
+<p><img src="../presetation/wordcloud_chongqing.png" class="img-fluid" style="width:60.0%" alt="wordcloud_chongqing (Chongqing)"></p>
+<p>The top 10 keywords chart reinforces the difference — while <strong>“china”</strong> and <strong>“streams”</strong> still lead (as they did everywhere), the heavy focus on “korea” drops way down, and words like <strong>“beautiful”</strong> and <strong>“city”</strong> climb higher.</p>
+<p><img src="../presetation/Top_10_Keywords_Chart_chongqing.png" class="img-fluid" style="width:60.0%" alt="Top 10 Keywords Chart_chongqing (Chongqing)"></p>
+<p>The emotional tone stayed very similar to Shanghai — mostly calm observation with a lot of positivity. The sentiment distribution for Chongqing looks almost identical:</p>
+<p><img src="../presetation/sentiment_dist_chongqing.png" class="img-fluid" style="width:60.0%" alt="Sentiment distribution_chongqing (Chongqing)"></p>
 <ul>
-<li>Removal of emojis, URLs, and special characters<br>
-</li>
-<li>Lowercasing of text<br>
-</li>
-<li>Removal of stop words using NLTK<br>
-</li>
-<li>Tokenization for keyword analysis</li>
+<li>Around positive comments showing excitement and admiration</li>
+<li>A large majority neutral — people simply describing the unreal views (“this is crazy”, “so many layers”)</li>
+<li>A small number negative (usually about heat, crowds, or minor stream issues)</li>
 </ul>
-<p>These steps aimed to reduce noise while preserving semantically meaningful content.</p>
+<p>The compound sentiment score distribution also mirrors Shanghai’s pattern — a huge neutral spike at 0.00, with gentle tails of positive wonder on one side and minor negativity on the other.</p>
+<p><img src="../presetation/sentiment_score_hist_chongqing.png" class="img-fluid" style="width:60.0%" alt="Distribution of Compound Sentiment Scores histogram for Chongqing"></p>
+<p>Chongqing felt like the moment viewers stopped trying to “place” the experience on a map and just let themselves be amazed by something truly unique. The contrast with Shanghai was clear: one city invited comparison and global benchmarking, the other invited surrender to pure visual magic.</p>
 <hr>
 </section>
-<section id="methodology" class="level2" data-number="5">
-<h2 data-number="5" class="anchored" data-anchor-id="methodology"><span class="header-section-number">5</span> Methodology</h2>
-<section id="sentiment-analysis-with-vader" class="level3" data-number="5.1">
-<h3 data-number="5.1" class="anchored" data-anchor-id="sentiment-analysis-with-vader"><span class="header-section-number">5.1</span> Sentiment Analysis with VADER</h3>
-<p>Sentiment was analyzed using <strong>VADER (Valence Aware Dictionary and sEntiment Reasoner)</strong>, a rule-based NLP model designed for social media text.</p>
-<p>Each comment was classified as:</p>
+<section id="shanghai-vs-chongqing-spotting-the-differences" class="level2" data-number="7">
+<h2 data-number="7" class="anchored" data-anchor-id="shanghai-vs-chongqing-spotting-the-differences"><span class="header-section-number">7</span> Shanghai vs Chongqing – Spotting the Differences</h2>
+<p>Now that we’ve explored both cities through Speed’s lens and the eyes of the global chat, let’s put them side by side. What happens when the same loud, energetic streamer shows the world two very different Chinese metropolises? Do viewers react the same way… or does each city tell its own story?</p>
+<section id="the-similarities-a-shared-digital-tourist-vibe" class="level3" data-number="7.1">
+<h3 data-number="7.1" class="anchored" data-anchor-id="the-similarities-a-shared-digital-tourist-vibe"><span class="header-section-number">7.1</span> The Similarities – A Shared “Digital Tourist” Vibe</h3>
+<p>The emotional tone stayed remarkably consistent across both Shanghai and Chongqing.</p>
+<p>Here are the sentiment distributions compared side by side:</p>
+<div class="quarto-layout-panel" data-layout-ncol="2">
+<div class="quarto-layout-row">
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<p><img src="../presetation/sentiment_dist_shanghai.png" class="img-fluid" alt="sentiment_dist_shanghai"></p>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<p><img src="../presetation/sentiment_dist_chongqing.png" class="img-fluid" alt="Sentiment distribution_chongqing (Chongqing)"></p>
+</div>
+</div>
+</div>
+<p>Both charts show the same pattern: - A huge peak of <strong>neutral</strong> comments (~55–60% in both cities) — people mostly describing and observing rather than strongly judging. - A solid amount of <strong>positive</strong> reactions (~25–30%) full of wonder, excitement, and admiration (“beautiful”, “insane”, “modern”). - A small slice of <strong>negative</strong> comments (~10–15%) — usually minor gripes about crowds, heat, or stream issues.</p>
+<p>The compound sentiment score histograms tell the same story: a massive spike right at neutral (0.00), with gentle positive tails and almost no deep negativity.</p>
+<p>This tells us something powerful: no matter how futuristic or layered the city looked, most viewers approached it the same way — as <strong>curious observers</strong>, not critics. They were “digital tourists” collectively taking notes on a new world.</p>
+</section>
+<section id="the-differences-each-city-left-its-own-mark" class="level3" data-number="7.2">
+<h3 data-number="7.2" class="anchored" data-anchor-id="the-differences-each-city-left-its-own-mark"><span class="header-section-number">7.2</span> The Differences – Each City Left Its Own Mark</h3>
+<p>While the overall mood was similar, what people talked about changed dramatically depending on what they saw.</p>
+<p><strong>Shanghai</strong> invited constant comparison:</p>
 <ul>
-<li><strong>Positive</strong>: expressions of approval or excitement<br>
-</li>
-<li><strong>Neutral</strong>: descriptive or observational statements<br>
-</li>
-<li><strong>Negative</strong>: expressions of criticism or frustration</li>
+<li>Keywords like <strong>“korea”</strong> , <strong>“modern”</strong> , <strong>“future”</strong> , and <strong>“skyscrapers”</strong> dominated.</li>
+<li>Viewers kept trying to place Shanghai in a global context (“this reminds me of Korea”, “looks like Tokyo but bigger”).</li>
+<li>It was about benchmarking — “Where does this fit in the world I already know?”</li>
 </ul>
-<p>Neutral sentiment is interpreted not as disengagement, but as <em>observational attention</em>.</p>
-</section>
-<section id="keyword-analysis" class="level3" data-number="5.2">
-<h3 data-number="5.2" class="anchored" data-anchor-id="keyword-analysis"><span class="header-section-number">5.2</span> Keyword Analysis</h3>
-<p>Word frequency analysis and word clouds were generated separately for Shanghai and Chongqing. Highly frequent generic terms (e.g., “stream”, “speed”, “china”) were removed in comparative analyses to emphasize city-specific discourse.</p>
-<hr>
-</section>
-</section>
-<section id="results" class="level2" data-number="6">
-<h2 data-number="6" class="anchored" data-anchor-id="results"><span class="header-section-number">6</span> Results</h2>
-<section id="sentiment-distribution" class="level3" data-number="6.1">
-<h3 data-number="6.1" class="anchored" data-anchor-id="sentiment-distribution"><span class="header-section-number">6.1</span> Sentiment Distribution</h3>
-<p>Across both cities, neutral sentiment dominates:</p>
+<p><strong>Chongqing</strong> invited surrender to wonder:</p>
 <ul>
-<li>Shanghai: 55.9% neutral<br>
-</li>
-<li>Chongqing: 60.1% neutral</li>
+<li>“korea” almost disappeared from the top keywords.</li>
+<li>Words like <strong>“beautiful”</strong>, <strong>“city”</strong>, <strong>“layers”</strong>, <strong>“insane”</strong>, and <strong>“wow”</strong>took center stage.</li>
+<li>The chat focused on the sheer visual uniqueness — no need to compare, just pure amazement at the stacked, cyberpunk reality.</li>
 </ul>
-<p>Positive sentiment consistently exceeds negative sentiment, indicating curiosity rather than hostility.</p>
 </section>
-<section id="city-level-differences" class="level3" data-number="6.2">
-<h3 data-number="6.2" class="anchored" data-anchor-id="city-level-differences"><span class="header-section-number">6.2</span> City-Level Differences</h3>
-<p><strong>Shanghai</strong> chat reactions emphasize scale, modernity, and global comparison, frequently referencing other Asian cities such as Seoul.</p>
-<p><strong>Chongqing</strong> reactions focus more on visual uniqueness and geographic complexity, with fewer comparative references.</p>
+<section id="what-this-means" class="level3" data-number="7.3">
+<h3 data-number="7.3" class="anchored" data-anchor-id="what-this-means"><span class="header-section-number">7.3</span> What This Means</h3>
+<p>The data reveals two truths at once:</p>
+<ol type="1">
+<li><strong>Consistency</strong> — Livestream audiences tend to observe first and judge second. Curiosity and neutral description win over negativity almost everywhere.</li>
+<li><strong>Sensitivity to place</strong> — Even in the same country, different cities produce different conversations. Architecture, scale, and atmosphere shape what people notice and how they frame it.</li>
+</ol>
+<p>Shanghai asked “How does this compare to what I know?”</p>
+<p>Chongqing simply said “Wow… this is something else.”</p>
+<p>Speed’s chaotic tour didn’t just entertain — it turned millions of people into real-time global witnesses, each city leaving its own fingerprint on the collective chat.</p>
 <hr>
 </section>
 </section>
-<section id="discussion" class="level2" data-number="7">
-<h2 data-number="7" class="anchored" data-anchor-id="discussion"><span class="header-section-number">7</span> Discussion</h2>
-<p>The findings challenge the assumption that livestream chat spaces are inherently chaotic or toxic. Instead, they function as collective observation spaces where audiences engage in real-time sense-making.</p>
-<p>This supports the concept of a <strong>digital tourist gaze</strong>, where viewers act as spectators encountering unfamiliar urban environments.</p>
-<hr>
-</section>
-<section id="limitations" class="level2" data-number="8">
-<h2 data-number="8" class="anchored" data-anchor-id="limitations"><span class="header-section-number">8</span> Limitations</h2>
+<section id="conclusion-looking-ahead" class="level2" data-number="8">
+<h2 data-number="8" class="anchored" data-anchor-id="conclusion-looking-ahead"><span class="header-section-number">8</span> Conclusion &amp; Looking Ahead</h2>
+<p>And so the journey through Speed’s China livestreams comes full circle. What began as chaotic, high-energy streams — a young American streamer running through unfamiliar streets, screaming about food and backflips — quietly turned into something much bigger: a real-time window for millions of people to see modern China for the first time.</p>
+<section id="the-big-picture-what-the-data-really-shows" class="level3" data-number="8.1">
+<h3 data-number="8.1" class="anchored" data-anchor-id="the-big-picture-what-the-data-really-shows"><span class="header-section-number">8.1</span> The Big Picture: What the Data Really Shows</h3>
+<p>Across both Shanghai and Chongqing, the live chat told a surprisingly consistent story:</p>
 <ul>
-<li>VADER struggles with sarcasm and Gen-Z slang<br>
-</li>
-<li>No temporal alignment between comments and specific stream events<br>
-</li>
-<li>Analysis limited to English-language comments</li>
-</ul>
-<hr>
-</section>
-<section id="future-work" class="level2" data-number="9">
-<h2 data-number="9" class="anchored" data-anchor-id="future-work"><span class="header-section-number">9</span> Future Work</h2>
+<li><p><strong>Curiosity &gt; Criticism</strong> Viewers acted mostly as <strong>digital tourists</strong> — observing, describing, and marveling rather than judging harshly. Neutral comments dominated (~55–60% in both cities), positive wonder came in a strong second (~25–30%), and outright negativity stayed low (~10–15%).</p></li>
+<li><p><strong>Places shape perception</strong> Even though the overall emotional tone was similar, each city left its own fingerprint:</p>
 <ul>
-<li>Temporal sentiment analysis aligned with stream moments<br>
-</li>
-<li>Multilingual sentiment analysis including Chinese comments<br>
-</li>
-<li>Comparative analysis with other streamers or countries</li>
+<li><strong>Shanghai</strong> sparked global comparisons (“looks like Korea”, “so modern”, “future city”).</li>
+<li><strong>Chongqing</strong> inspired pure awe (“beautiful”, “insane layers”, “cyberpunk”).</li>
+</ul></li>
+</ul>
+<p>This shows that livestream audiences are sensitive to visual and cultural differences — they don’t just see “China”; they see different Chinas depending on what appears on screen.</p>
+<ul>
+<li><strong>Livestreams as bridges</strong> In an age of filtered news, edited travel vlogs, and polarized media, Speed’s unscripted, hours-long broadcasts offered something rare: raw, unfiltered access. The chat became a collective voice — thousands of people from around the world quietly reacting, comparing, wondering, and connecting in real time.</li>
+</ul>
+<p>In the end, the data proves that even in the middle of barking memes, fan mobs, and spicy hotpot reactions, something meaningful was happening: global perception was being shaped, one comment at a time.</p>
+</section>
+<section id="looking-ahead-where-this-project-can-go-next" class="level3" data-number="8.2">
+<h3 data-number="8.2" class="anchored" data-anchor-id="looking-ahead-where-this-project-can-go-next"><span class="header-section-number">8.2</span> Looking Ahead – Where This Project Can Go Next</h3>
+<p>This analysis was just a first step. There are exciting ways to build on it:</p>
+<ul>
+<li><p><strong>More cities</strong> — Extend the analysis to Beijing, Chengdu, Guangzhou, or even compare China streams with Speed’s other tours (Europe, Southeast Asia, etc.).</p></li>
+<li><p><strong>Temporal patterns</strong> — Track how sentiment changed hour by hour during a single stream (did people get more excited at night?).</p></li>
+<li><p><strong>Multilingual support</strong> — Many comments mixed English, Chinese, Indonesian, Korean — future versions could handle non-English text better.</p></li>
+<li><p><strong>Improved tools</strong> — VADER does great with social media, but it sometimes misses sarcasm, streaming slang (“santai”, “sniped”), or context. Adding more advanced NLP models could refine the results.</p></li>
+<li><p><strong>Deeper topics</strong> — Use advanced topic modeling or emotion detection to uncover subtler themes (humor, respect, cultural surprise).</p></li>
 </ul>
 <hr>
 </section>
-<section id="conclusion" class="level2" data-number="10">
-<h2 data-number="10" class="anchored" data-anchor-id="conclusion"><span class="header-section-number">10</span> Conclusion</h2>
-<p>IShowSpeed’s China livestreams were not merely entertainment events, but moments of large-scale cultural exposure. The dominance of neutral and positive sentiment suggests that livestream chats can function as meaningful indicators of global perception rather than simple noise.</p>
-<p>Livestreams thus offer valuable opportunities for studying the digital public sphere in real time.</p>
-<hr>
 </section>
-<section id="appendix-reproducible-analysis-code" class="level2" data-number="11">
-<h2 data-number="11" class="anchored" data-anchor-id="appendix-reproducible-analysis-code"><span class="header-section-number">11</span> Appendix: Reproducible Analysis Code</h2>
+<section id="final-thought" class="level2" data-number="9">
+<h2 data-number="9" class="anchored" data-anchor-id="final-thought"><span class="header-section-number">9</span> Final Thought</h2>
+<p>Livestreams are no longer just entertainment.</p>
+<p>They are modern windows — messy, loud, real-time portals through which millions encounter the world.</p>
+<p>Speed’s China tour didn’t just go viral. It quietly showed how curiosity, wonder, and a little chaos can bring people closer to places they’ve never been.</p>
+<p>Thank you for reading this data story.</p>
+<p>The next stream is always just one click away.</p>
+<hr>
 </section>
 
 </main>
@@ -284,13 +338,14 @@ ul.task-list li input[type="checkbox"] {
       e.clearSelection();
     }
     const getTextToCopy = function(trigger) {
-        const codeEl = trigger.previousElementSibling.cloneNode(true);
-        for (const childEl of codeEl.children) {
-          if (isCodeAnnotation(childEl)) {
-            childEl.remove();
-          }
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
         }
-        return codeEl.innerText;
+      }
+      return codeEl.innerText;
     }
     const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
       text: getTextToCopy
