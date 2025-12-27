@@ -2,7 +2,7 @@
 ---
 title: "Streamer Diplomacy: Sentiment Analysis of Global Live Chat Reactions"
 author: "Zerong Lu"
-date: "2025"
+date: "December 28 2025"
 format:
   html:
     toc: true
