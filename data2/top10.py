@@ -5,7 +5,7 @@ import re
 import matplotlib.pyplot as plt
 
 # ========= CONFIGURATION =========
-FILE_PATH = "clean_comments_chongqing.json"   # Change if your file is elsewhere
+FILE_PATH = "clean_comments_chongqing.json"   
 TOP_N = 10
 # ==================================
 
@@ -70,9 +70,7 @@ for bar in bars:
 
 plt.tight_layout()
 
-# Save the chart
 plt.savefig('Top_10_Keywords_Chart.png', dpi=300, bbox_inches='tight')
 print("Chart saved as → Top_10_Keywords_Chart.png")
 
-# Optionally show the plot (uncomment next line if you want to see it live)
 plt.show()
